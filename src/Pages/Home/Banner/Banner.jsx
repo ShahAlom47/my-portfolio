@@ -8,7 +8,7 @@ const Banner = () => {
             <div className=" h-scree  py-10 md:px-5 lg:px-10 px-2 font-spline flex justify-between  ">
               <div className="md:w-1/2 lg:w-1/2 w-full">
               <h4 className='text-color-p font-bold'>Hello, I`m Shah Alom</h4>
-                <h1 className="text-3xl text-white font-bold my-2 mb-4 ">Creative Front-End Developer</h1>
+                <h1 className="text-4xl text-white font-bold my-2 mb-4 ">Creative Front-End Developer</h1>
                 <p className=' text-white text-xs '>
                     Skilled in HTML, CSS, React, and more, I build user-friendly websites and applications with innovative designs.</p>
                     <h1 className=' text-color-p text-xl mt-6 font-bold'>A Journey of Dreams and Emotions</h1>
