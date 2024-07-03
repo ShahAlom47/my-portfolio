@@ -11,7 +11,7 @@ const Banner = () => {
                 <h1 className="text-3xl text-white font-bold my-2 mb-4 ">Creative Front-End Developer</h1>
                 <p className=' text-white text-xs '>
                     Skilled in HTML, CSS, React, and more, I build user-friendly websites and applications with innovative designs.</p>
-
+                    <h1 className=' text-color-p text-xl mt-6 font-bold'>A Journey of Dreams and Emotions</h1>
                        
                     <button className='btn-p  px-4 py-1 my-6  '>
                     <a className='w-[200px] flex items-center gap-3' download={'sah-alom-resume.pdf'}  target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1mJWPTlTqSm8euOgvmfPezWLtFbUAb69Y/view">Download Resume <AiOutlineDownload /></a>
