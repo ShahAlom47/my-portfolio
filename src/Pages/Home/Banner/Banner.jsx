@@ -3,10 +3,10 @@ import bg from '../../../assets/image/banner.jpg';
 
 const Banner = () => {
     return (
-        <div className="bg-fixed bg-cover bg-center lg:h-screen md:h-screen " style={{ backgroundImage: `url(${bg})` }}>
-            <div className=" h-full flex items-center p-5">
-            <div className=" h-scree max-w p-10 font-spline ">
-              <div className="md:w-1/2 lg:w-1/2">
+        <div className="bg-fixed bg-cover bg-center lg:h-screen md:h-screen overflow-hidden " style={{ backgroundImage: `url(${bg})` }}>
+            <div className=" h-full flex max-w p-5">
+            <div className=" h-scree  py-10 md:px-5 lg:px-10 px-2 font-spline flex justify-between  ">
+              <div className="md:w-1/2 lg:w-1/2 w-full">
               <h4 className='text-color-p font-bold'>Hello, I`m Shah Alom</h4>
                 <h1 className="text-3xl text-white font-bold my-2 mb-4 ">Creative Front-End Developer</h1>
                 <p className=' text-white text-xs '>
@@ -17,6 +17,7 @@ const Banner = () => {
                     <a className='w-[200px] flex items-center gap-3' download={'sah-alom-resume.pdf'}  target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1mJWPTlTqSm8euOgvmfPezWLtFbUAb69Y/view">Download Resume <AiOutlineDownload /></a>
                     </button>
               </div>
+              <div className=' flex-1'></div>
             </div>
             </div>
         </div>

@@ -22,7 +22,7 @@ const AboutMe = () => {
                     <div className="flex-1 p-">
                         <h1 className="text-color-p font-bold border-b-2 border-color-p mb-5  text-lg">ABOUT ME</h1>
                         <p className="text-slate-500">
-                            {isReadMore ? `${text.slice(0, 250)}...` : text}
+                            {isReadMore ? `${text.slice(0, 450)}...` : text}
                             {isReadMore ? null : (
                                 <>
                                     <a href={email} className="text-blue-500 underline">sahalom4729@gmail.com</a> or connect with me on
