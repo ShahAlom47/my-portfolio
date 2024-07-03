@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { FaFacebook, FaGithub, FaLinkedin } from 'react-icons/fa';
 import myPhoto from '../../assets/image/my-photo.png';
 
@@ -17,10 +17,10 @@ const AboutMe = () => {
 
     return (
         <div className="bg-stone-900 p-10">
-            <div className="max-w p-5">
-                <div className="rounded-r-full border-color-p flex w-full">
-                    <div className="flex-1">
-                        <h1 className="text-color-p font-bold text-lg">ABOUT ME</h1>
+            <div className="max-w lg:p-5 md:p-3 p-1">
+                <div className="rounded-r-full border-color-p flex lg:flex-row md:flex-row flex-col gap-5 w-full">
+                    <div className="flex-1 p-">
+                        <h1 className="text-color-p font-bold border-b-2 border-color-p mb-5  text-lg">ABOUT ME</h1>
                         <p className="text-slate-500">
                             {isReadMore ? `${text.slice(0, 250)}...` : text}
                             {isReadMore ? null : (
@@ -44,7 +44,7 @@ const AboutMe = () => {
                             {isReadMore ? "Read More" : "Read Less"}
                         </button>
                     </div>
-                    <div className="rounded-full h-full w-4/12 bg-gray-500">
+                    <div className="rounded-full h-full lg:w-4/12 md:w-4/12 w-8/12 mx-auto bg-gray-500 my-auto">
                         <img src={myPhoto} alt="Your Photo" className='border-color-p border-4 w-full h-full rounded-full' />
                     </div>
                 </div>
