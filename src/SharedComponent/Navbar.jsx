@@ -80,9 +80,9 @@ const nav = <>
 
 
     return (
-        <div className={` border-b- shadow-md  bg-color-p bg-opacity-70  w-full m-auto" p-0  z-50 fixed  ${visible ? 'top-0 transition-all' : '-top-20 transition-all'} duration-1000`} >
+        <div className={` border-b- shadow-md   w-full m-auto" p-0  z-50 fixed  ${visible ? 'top-0 transition-all' : '-top-20 transition-all'} duration-1000`} >
         
-            <div className="navbar p-0 max-w m-auto flex justify-between text-white">
+            <div className="navbar   p-0 max-w m-auto flex justify-between text-white">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -92,7 +92,7 @@ const nav = <>
                             {nav}
                         </ul>
                     </div>
-                   <Link><h1 className="text-lg text-white font-semibold ml-3">Shah Alom</h1></Link>
+                   <Link><h1 className="text-lg text-white font-bold ml-3">Shah Alom</h1></Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 navBar">
