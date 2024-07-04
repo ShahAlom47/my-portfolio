@@ -1,41 +1,32 @@
+import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 
 
 const Footer = () => {
     return (
-        <footer className="footer p-10 bg-base-200 text-base-content my-16">
-        <nav>
-          <h6 className="footer-title">Services</h6> 
-          <a className="link link-hover">Branding</a>
-          <a className="link link-hover">Design</a>
-          <a className="link link-hover">Marketing</a>
-          <a className="link link-hover">Advertisement</a>
-        </nav> 
-        <nav>
-          <h6 className="footer-title">Company</h6> 
-          <a className="link link-hover">About us</a>
-          <a className="link link-hover">Contact</a>
-          <a className="link link-hover">Jobs</a>
-          <a className="link link-hover">Press kit</a>
-        </nav> 
-        <nav>
-          <h6 className="footer-title">Legal</h6> 
-          <a className="link link-hover">Terms of use</a>
-          <a className="link link-hover">Privacy policy</a>
-          <a className="link link-hover">Cookie policy</a>
-        </nav> 
-        <form>
-          <h6 className="footer-title">Newsletter</h6> 
-          <fieldset className="form-control w-80">
-            <label className="label">
-              <span className="label-text">Enter your email address</span>
-            </label> 
-            <div className="join">
-              <input type="text" placeholder="username@site.com" className="input input-bordered join-item" /> 
-              <button className="btn btn-primary join-item">Subscribe</button>
-            </div>
-          </fieldset>
-        </form>
-      </footer>
+      <footer className="footer footer-center bg-stone-900 text-white rounded p-10">
+  <nav className="grid grid-flow-col gap-4 text-lg">
+    <a className="link link-hover">About us</a>
+    <a className="link link-hover">Contact</a>
+    <a className="link link-hover">Jobs</a>
+    <a className="link link-hover">Press kit</a>
+  </nav>
+  <nav className=" ">
+  <div className="flex space-x-4 ">
+                                        <a href="https://www.facebook.com/sai.ami.393" target="_blank" rel="noopener noreferrer">
+                                            <FaFacebook className="w-6 h-6 text-blue-600" />
+                                        </a>
+                                        <a href="https://github.com/ShahAlom47" target="_blank" rel="noopener noreferrer">
+                                            <FaGithub className="w-6 h-6 text-gray-400" />
+                                        </a>
+                                        <a href="https://www.linkedin.com/in/shah-alom-626322290/" target="_blank" rel="noopener noreferrer">
+                                            <FaLinkedin className="w-6 h-6 text-blue-700" />
+                                        </a>
+                                    </div>
+  </nav>
+  <aside className=" border-t-2 w-full py-4 ">
+    <p>Copyright © ${new Date().getFullYear()} - All right reserved by Shah Alom</p>
+  </aside>
+</footer>
     );
 };
 
