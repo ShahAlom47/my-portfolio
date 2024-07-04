@@ -4,11 +4,12 @@ import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 const Footer = () => {
     return (
       <footer className="footer footer-center bg-stone-900 text-white rounded p-10">
-  <nav className="grid grid-flow-col gap-4 text-lg">
-    <a className="link link-hover">About us</a>
-    <a className="link link-hover">Contact</a>
-    <a className="link link-hover">Jobs</a>
-    <a className="link link-hover">Press kit</a>
+  <nav className="grid grid-flow-col gap-4 text-lg ">
+  <li className="hover:text-color-p font-semibold"><a href="#home">Home</a></li>
+<li className="hover:text-color-p font-semibold"><a href="#about">About</a></li>
+<li className="hover:text-color-p font-semibold"><a href="#skill">Skill</a></li>
+<li className="hover:text-color-p font-semibold"><a href="#project">Project</a></li>
+<li className="hover:text-color-p font-semibold"><a href="#contact">Contact </a></li>
   </nav>
   <nav className=" ">
   <div className="flex space-x-4 ">

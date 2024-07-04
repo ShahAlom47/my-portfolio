@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import img1 from '../../assets/image/HONEST-Real-Estate.jpg'
-import img2 from '../../assets/image/king-lion-hotel.jpg'
-import img3 from '../../assets/image/Trek-trob.jpg'
+import { projectData } from "../../../public/projectData";
+
 
 
 const MyProject = () => {
@@ -55,7 +54,7 @@ const MyProject = () => {
                                             className="z-10 flex-1 absolute  -bottom-10 left-3 ">
                                             <div className=" flex justify-between">
 
-                                                <Link ><p
+                                                <Link to={`/project/details/${data.id}`}><p
                                                 style={{ width: '120px', height: '25px' }}
                                                 className=' btn-p z-0 -ml-1 backdrop-filter backdrop-blur-md  px-2 rounded-r-sm font-semibold text-white '>Details </p></Link>
 
@@ -111,33 +110,3 @@ const MyProject = () => {
 
 export default MyProject;
 
-const projectData = [
-    {
-        id: 1,
-        projectName: 'HONEST Real Estate',
-        projectImg: img1,
-        projectLiveUrl: 'https://assignment-12-e88ce.web.app/',
-        projectDescription: 'HONEST Real Estate is a modern web app for streamlined real estate transactions. Featuring secure authentication, Stripe payment integration, and role-based dashboards, built with React, Tailwind CSS, Firebase, and Node.js.',
-
-
-    },
-    {
-        id: 2,
-        projectName: 'King  Lion Hotel',
-        projectImg: img2,
-        projectLiveUrl: 'https://assignmet-11-jwt.web.app/',
-        projectDescription: 'This hotel booking system enables users to seamlessly book rooms and manage reservations, supported by robust user authentication for security and ease of access.',
-
-
-    },
-    {
-        id: 3,
-        projectName: 'TrekTrove',
-        projectImg: img3,
-        projectLiveUrl: 'https://assaignment-10-with-server.web.app/',
-
-        projectDescription: 'TrekTrove is a single-page website showcasing various tourist spots. Users can explore destinations, view spot details, and access additional information',
-
-
-    }
-]

@@ -1,3 +1,4 @@
+import Footer from "../../SharedComponent/Footer";
 import Navbar from "../../SharedComponent/Navbar";
 import AboutMe from "../AboutMe/AboutMe";
 import Contact from "../Contact/Contact";
@@ -14,6 +15,7 @@ const Home = () => {
            <MySkills></MySkills>
            <MyProject></MyProject>
            <Contact></Contact>
+           <Footer></Footer>
             
         </div>
     );
