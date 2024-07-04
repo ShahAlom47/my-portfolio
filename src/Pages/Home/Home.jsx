@@ -1,3 +1,4 @@
+import Navbar from "../../SharedComponent/Navbar";
 import AboutMe from "../AboutMe/AboutMe";
 import Contact from "../Contact/Contact";
 import MyProject from "../MyProject/MyProject";
@@ -7,6 +8,7 @@ import Banner from "./Banner/Banner";
 const Home = () => {
     return (
         <div>
+            <Navbar></Navbar>
            <Banner></Banner>
            <AboutMe></AboutMe>
            <MySkills></MySkills>

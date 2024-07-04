@@ -3,6 +3,7 @@ import { FaFacebook, FaGithub, FaLinkedin } from 'react-icons/fa';
 import myPhoto from '../../assets/image/my-photo.png';
 import { LiaSchoolSolid } from 'react-icons/lia';
 
+
 const AboutMe = () => {
     const [isReadMore, setIsReadMore] = useState(true);
 
@@ -15,7 +16,7 @@ const AboutMe = () => {
     const email = "sahalom4729@gmail.com";
 
     return (
-        <div className="bg-stone-900 p-10">
+        <div id='about' className="bg-stone-900 md:p-7 p-4 lg:p-10">
             <div className="max-w lg:p-5 md:p-3 p-1">
                 <div className="rounded-r-full border-color-p flex lg:flex-row md:flex-row flex-col gap-5 w-full">
                     <div className="flex-1 p-">

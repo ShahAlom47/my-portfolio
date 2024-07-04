@@ -20,12 +20,12 @@ const MyProject = () => {
         setHoveredIndex(null);
     }
     return (
-        <div className=" bg-stone-900 py-10">
-            <div className="max-w">
+        <div id="project" className=" bg-stone-900 md:p-7 p-4 lg:p-10">
+            <div className="max-w py-5">
                 <div className="flex lg:flex-row gap-5 flex-col">
                     <div className=" lg:w-3/12 md:w-3/12 w-full   flex flex-col p-3 ">
                         <div className="mb-6">
-                            <h1 className=" text-3xl font-bold text-white">MY LATESTS
+                            <h1 className="md:text-2xl text-xl lg:text-3xl font-bold text-white">MY LATESTS
                                 PROJECT</h1>
 
                         </div>
