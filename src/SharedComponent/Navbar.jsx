@@ -8,9 +8,16 @@ const Navbar = () => {
     const [themData,setThemeData]=useState(null)
    
 
+    const scrollToSection = (id) => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
 
 
 const [visible, setVisible] = useState(true);
+const [visibleName,setVisibleName]=useState(true);
 
 useEffect(() => {
     let prevSPos = window.pageYOffset;
@@ -18,9 +25,15 @@ useEffect(() => {
     const handleScroll = () => {
         const currentSPos = window.pageYOffset;
         const isVisible = prevSPos > currentSPos;
-
+            console.log(currentSPos);
         setVisible(isVisible);
         prevSPos = currentSPos;
+        if(currentSPos>100){
+            setVisibleName(false)
+        }
+        else{
+            setVisibleName(true)
+        }
 
     };
 
@@ -54,11 +67,11 @@ theme ?  localStorage.setItem('theme',JSON.stringify('dark')):localStorage.setIt
 
 
 const nav = <>
-<li className="hover:text-color-p font-semibold"><a href="#home">Home</a></li>
-<li className="hover:text-color-p font-semibold"><a href="#about">About</a></li>
-<li className="hover:text-color-p font-semibold"><a href="#skill">Skill</a></li>
-<li className="hover:text-color-p font-semibold"><a href="#project">Project</a></li>
-<li className="hover:text-color-p font-semibold"><a href="#contact">Contact </a></li>
+<li className="hover:text-color-p font-semibold"><a  onClick={() => scrollToSection('home')} href="#home" >Home</a></li>
+<li  className="hover:text-color-p font-semibold"><a onClick={() => scrollToSection('about')} href="#about">About</a></li>
+<li  className="hover:text-color-p font-semibold"><a onClick={() => scrollToSection('skill')} href="#skill">Skill</a></li>
+<li  className="hover:text-color-p font-semibold"><a onClick={() => scrollToSection('project')} href="#project">Project</a></li>
+<li  className="hover:text-color-p font-semibold"><a onClick={() => scrollToSection('contact')} href="#contact">Contact </a></li>
 
 <label onClick={themeControl} className="flex cursor-pointer gap-2 items-center ml-3">
 
@@ -80,11 +93,11 @@ const nav = <>
 
 
     return (
-        <div className={` border-b- shadow-md   w-full m-auto" p-0  z-50 fixed  ${visible ? 'top-0 transition-all' : '-top-20 transition-all'} duration-1000`} >
+        <div className={`  w-full m-auto" p-0  z-50 fixed top-20 `} >
         
-            <div className="navbar   p-0 max-w m-auto flex justify-between text-white">
-                <div className="navbar-start">
-                    <div className="dropdown">
+            <div className="   p-0 m-auto flex flex-row lg:flex-col md:flex-col justify-start text-white">
+                <div className="navbar-start flex items-center">
+                    <div className="dropdown  fixed top-3 z-50 ">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                         </div>
@@ -92,10 +105,10 @@ const nav = <>
                             {nav}
                         </ul>
                     </div>
-                   <Link><h1 className="text-lg text-white font-bold ml-3">Shah Alom</h1></Link>
+                   <Link><h1 className={`text-xl text-white font-bold ml-5  z-50 fixed md:left-0  lg:left-0 left-8  ${visibleName ? 'top-5 transition-all' : '-top-20 transition-all'} duration-1000 `} >Shah Alom</h1></Link>
                 </div>
-                <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1 navBar">
+                <div className="navbar-center hidden lg:flex -mt-10 ">
+                    <ul className="menu menu-horizontal px-1 navBar   flex-col flex">
                         {nav}
                     </ul>
                 </div>

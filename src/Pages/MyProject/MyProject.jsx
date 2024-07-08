@@ -19,7 +19,7 @@ const MyProject = () => {
         setHoveredIndex(null);
     }
     return (
-        <div id="project" className=" bg-stone-900 md:p-7 p-4 lg:p-10">
+        <div id="project" className=" bg-black-p md:p-7 p-4 lg:p-10  lg:pl-16 md:pl-16">
             <div className="max-w py-5">
                 <div className="flex lg:flex-row gap-5 flex-col">
                     <div className=" lg:w-3/12 md:w-3/12 w-full   flex flex-col p-3 ">

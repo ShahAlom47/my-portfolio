@@ -19,7 +19,7 @@ const Details = () => {
 
     return (
         
-        <div className="bg-stone-900">
+        <div className="bg-black-p lg:pl-14 md:pl-12">
             <div className="max-w py-10">
             <div className={` border-b- shadow-md   w-full m-auto" p-0  z-50 bg-slate-500  `} >
         

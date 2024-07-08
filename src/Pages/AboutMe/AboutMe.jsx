@@ -16,7 +16,7 @@ const AboutMe = () => {
     const email = "sahalom4729@gmail.com";
 
     return (
-        <div id='about' className="bg-stone-900 md:p-7 p-4 lg:p-10">
+        <div id='about' className="bg-black-p md:p-7 p-4 lg:p-10  lg:pl-14 md:pl-12 ">
             <div className="max-w lg:p-5 md:p-3 p-1">
                 <div className="rounded-r-full border-color-p flex lg:flex-row md:flex-row flex-col gap-5 w-full">
                     <div className="flex-1 p-">
@@ -25,22 +25,22 @@ const AboutMe = () => {
                             {isReadMore ? `${text.slice(0, 450)}...` : (
                                 <>
                                     {text}
-                                   <div className="flex flex-col text-white">
-                                  
-                                    <div className="mt-4 flex flex-col">
-                                        <h1 className="text-xl font-bold border-b">Education</h1>
-                                        <h1 className='flex items-center'> <LiaSchoolSolid /> Higher Secondary Certificate <strong>(HSC)</strong></h1>
-                                       <p> <strong>College:</strong>Syed Shah Mostafa College</p>
-                                        <p className=""> <strong>Year:</strong> 2018 </p>
-                                       
+                                    <div className="flex flex-col text-white">
+
+                                        <div className="mt-4 flex flex-col">
+                                            <h1 className="text-xl font-bold border-b">Education</h1>
+                                            <h1 className='flex items-center'> <LiaSchoolSolid /> Higher Secondary Certificate <strong>(HSC)</strong></h1>
+                                            <p> <strong>College:</strong>Syed Shah Mostafa College</p>
+                                            <p className=""> <strong>Year:</strong> 2018 </p>
+
+                                        </div>
+                                        <div className="mt-4 flex flex-col">
+                                            <h1 className="text-xl font-bold border-b">Achievements</h1>
+                                            <p className=""> <strong>Institute:</strong>Programming Hero.</p>
+                                            <p className=""><strong>Course:</strong> Completed a web development course. </p>
+                                            <a href="https://drive.google.com/file/d/1mJWPTlTqSm8euOgvmfPezWLtFbUAb69Y/view" target="_blank" className="text-blue-500 underline ml-2">View Certificate</a>
+                                        </div>
                                     </div>
-                                    <div className="mt-4 flex flex-col">
-                                        <h1 className="text-xl font-bold border-b">Achievements</h1>
-                                       <p className=""> <strong>Institute:</strong>Programming Hero.</p> 
-                                        <p className=""><strong>Course:</strong> Completed a web development course. </p>
-                                        <a href="https://drive.google.com/file/d/1mJWPTlTqSm8euOgvmfPezWLtFbUAb69Y/view" target="_blank" className="text-blue-500 underline ml-2">View Certificate</a>
-                                    </div>
-                                   </div>
                                     <p className="mt-4">
                                         <a href={`mailto:${email}`} className="text-blue-500 underline">sahalom4729@gmail.com</a> or connect with me on
                                     </p>

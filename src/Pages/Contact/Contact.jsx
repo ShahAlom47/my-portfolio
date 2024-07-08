@@ -27,7 +27,7 @@ const Contact = () => {
     };
 
     return (
-        <div id='contact' className="bg-stone-900 md:p-7 p-4 lg:p-10">
+        <div id='contact' className="bg-black-p  md:p-7 p-4 lg:p-10 lg:pl-14 md:pl-12">
             <div className="max-w lg:p-5 md:p-3 p-1">
                 <h1 className="text-color-p font-bold border-b-2 border-color-p mb-5 text-3xl">CONTACT</h1>
                 <p className="text-slate-500 mb-8 lg:w-1/2 md:w-1/2 ">Feel free to reach out to me using the contact information below or by sending a message through the form.</p>

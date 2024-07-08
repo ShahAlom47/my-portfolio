@@ -11,7 +11,7 @@ import logoMongoDB from '../../assets/logo/MongoDB.png';
 
 const MySkills = () => {
     return (
-        <div id='skill' className=" bg-stone-900">
+        <div id='skill' className=" bg-black-p  lg:pl-14 md:pl-12">
             <div className="max-w md:p-7 p-4 lg:p-10  py-16">
                 <div className=" flex lg:flex-row-reverse md:flex-row-reverse flex-col  gap-4">
                 <div className=" text-white lg:w-4/12 md:w-4/12 w-full px-4 my-5">

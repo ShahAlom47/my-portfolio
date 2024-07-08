@@ -3,7 +3,7 @@ import bg from '../../../assets/image/banner.jpg';
 
 const Banner = () => {
     return (
-        <div id='home' className="bg-fixed bg-cover bg-center lg:h-screen md:h-screen overflow-hidden pt-10 " style={{ backgroundImage: `url(${bg})` }}>
+        <div id='home' className="bg-fixed bg-cover bg-center lg:h-screen md:h-screen overflow-hidden pt-10  lg:pl-14 md:pl-12 " style={{ backgroundImage: `url(${bg})` }}>
             <div className=" h-full flex max-w p-5">
             <div className=" h-scree  py-10 md:px-5 lg:px-10 px-2 font-spline flex justify-between  ">
               <div className="md:w-1/2 lg:w-1/2 w-full">
