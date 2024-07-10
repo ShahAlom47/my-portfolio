@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { projectData } from "../../../public/projectData";
+import { Element } from "react-scroll";
 
 
 
@@ -20,7 +21,8 @@ const MyProject = () => {
     }
     return (
         <div id="project" className=" bg-black-p md:p-7 p-4 lg:p-10  lg:pl-16 md:pl-16">
-            <div className="max-w py-5">
+           <Element name="project">
+           <div className="max-w py-5">
                 <div className="flex lg:flex-row gap-5 flex-col">
                     <div className=" lg:w-3/12 md:w-3/12 w-full   flex flex-col p-3 ">
                         <div className="mb-6">
@@ -104,6 +106,7 @@ const MyProject = () => {
                     </div>
                 </div>
             </div>
+           </Element>
         </div>
     );
 };

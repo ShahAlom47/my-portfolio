@@ -5,22 +5,13 @@ import { FaProjectDiagram } from "react-icons/fa";
 import { IoHomeOutline } from "react-icons/io5";
 import { RiContactsBook3Fill } from "react-icons/ri";
 import { SiCodeblocks } from "react-icons/si";
-import { Link,  } from "react-router-dom";
+
 import 'react-tooltip/dist/react-tooltip.css'
 import { Tooltip } from 'react-tooltip'
+import { Link } from "react-scroll";
 
 
 const Navbar = () => {
-   
-
-    const scrollToSection = (id) => {
-        const element = document.getElementById(id);
-        if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
-        }
-    };
-
-
 const [visible, setVisible] = useState(true);
 const [visibleName,setVisibleName]=useState(true);
 
@@ -53,49 +44,90 @@ useEffect(() => {
 
 
 
+const [activeSection, setActiveSection] = useState('home');
+console.log(
+    activeSection
+);
+
+const handleSetActive = (to) => {
+    setActiveSection(to);
+};
 
 
-
-
-const nav =
-  <>
-    <li className="hover:bg-color-p hover:text-black font-semibold text-xl rounded-sm bg-slate-900 transform decoration-slice transition-colors duration-400 ">
-      <a onClick={() => scrollToSection('home')} href="#home"
-        data-tooltip-id="my-tooltip" data-tooltip-content="Home"
-        >
-        <IoHomeOutline />
-      </a>
-    </li>
-    <li className="hover:bg-color-p hover:text-black font-semibold text-xl rounded-sm bg-slate-900 transition-colors duration-400">
-      <a onClick={() => scrollToSection('about')} href="#about"
-        data-tooltip-id="my-tooltip" data-tooltip-content="About"
-        >
-        <BiUserPin />
-      </a>
-    </li>
-    <li className="hover:bg-color-p hover:text-black font-semibold text-lg rounded-sm bg-slate-900 transition-colors duration-400">
-      <a onClick={() => scrollToSection('skill')} href="#skill"
-         data-tooltip-id="my-tooltip" data-tooltip-content="Skill"
-        >
-        <SiCodeblocks />
-      </a>
-    </li>
-    <li className="hover:bg-color-p hover:text-black font-semibold text-xl rounded-sm bg-slate-900 transition-colors duration-400">
-      <a onClick={() => scrollToSection('project')} href="#project"
-         data-tooltip-id="my-tooltip" data-tooltip-content="Project"
-        >
-        <FaProjectDiagram />
-      </a>
-    </li>
-    <li className="hover:bg-color-p hover:text-black font-semibold text-xl rounded-sm bg-slate-900 transition-colors duration-400">
-      <a onClick={() => scrollToSection('contact')} href="#contact"
-         data-tooltip-id="my-tooltip" data-tooltip-content="Contact"
-        >
-        <RiContactsBook3Fill />
-      </a>
-    </li>
-  </>
-;
+const nav = (
+    <>
+        <li className={`hover:bg-color-p hover:text-black font-semibold text-xl rounded-sm bg-slate-900   transform decoration-slice transition-colors duration-400 ${activeSection === 'home' ? 'active:bg-color-p' : ''}`}>
+            <Link
+                to="home"
+                spy={true}
+                smooth={true}
+                duration={500}
+                data-tooltip-id="my-tooltip"
+                data-tooltip-content="Home"
+                activeClass="active"
+                onSetActive={() => handleSetActive('home')}
+            >
+                <IoHomeOutline />
+            </Link>
+        </li>
+        <li className={`hover:bg-color-p hover:text-black font-semibold text-xl rounded-sm bg-slate-900 transition-colors duration-400 ${activeSection === 'about' ? 'active:bg-color-p' : ''}`}>
+            <Link
+                to="about"
+                spy={true}
+                smooth={true}
+                duration={500}
+                data-tooltip-id="my-tooltip"
+                data-tooltip-content="About"
+                activeClass="active"
+                onSetActive={() => handleSetActive('about')}
+            >
+                <BiUserPin />
+            </Link>
+        </li>
+        <li className={`hover:bg-color-p hover:text-black font-semibold text-lg rounded-sm bg-slate-900 transition-colors duration-400 ${activeSection === 'skill' ? 'active:bg-color-p ' : ''}`}>
+            <Link
+                to="skill"
+                spy={true}
+                smooth={true}
+                duration={500}
+                data-tooltip-id="my-tooltip"
+                data-tooltip-content="Skill"
+                activeClass="active"
+                onSetActive={() => handleSetActive('skill')}
+            >
+                <SiCodeblocks />
+            </Link>
+        </li>
+        <li className={`hover:bg-color-p hover:text-black font-semibold text-xl rounded-sm bg-slate-900 transition-colors duration-400 ${activeSection === 'project' ? 'active:bg-color-p' : ''}`}>
+            <Link
+                to="project"
+                spy={true}
+                smooth={true}
+                duration={500}
+                data-tooltip-id="my-tooltip"
+                data-tooltip-content="Project"
+                activeClass="active"
+                onSetActive={() => handleSetActive('project')}
+            >
+                <FaProjectDiagram />
+            </Link>
+        </li>
+        <li className={`hover:bg-color-p hover:text-black font-semibold text-xl rounded-sm bg-slate-900 transition-colors duration-400 ${activeSection === 'contact' ? 'active:bg-color-p' : ''}`}>
+            <Link
+                to="contact"
+                spy={true}
+                smooth={true}
+                duration={500}
+                data-tooltip-id="my-tooltip"
+                data-tooltip-content="Contact"
+                activeClass="active"
+                onSetActive={() => handleSetActive('contact')}
+            >
+                <RiContactsBook3Fill />
+            </Link>
+        </li>
+    </>
+);
 
 
  
