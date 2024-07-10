@@ -1,11 +1,16 @@
 
 import { useEffect, useState } from "react";
+import { BiUserPin } from "react-icons/bi";
+import { FaProjectDiagram } from "react-icons/fa";
+import { IoHomeOutline } from "react-icons/io5";
+import { RiContactsBook3Fill } from "react-icons/ri";
+import { SiCodeblocks } from "react-icons/si";
 import { Link,  } from "react-router-dom";
+import 'react-tooltip/dist/react-tooltip.css'
+import { Tooltip } from 'react-tooltip'
 
 
 const Navbar = () => {
-    const [theme, setTheme] = useState(true);
-    const [themData,setThemeData]=useState(null)
    
 
     const scrollToSection = (id) => {
@@ -48,44 +53,49 @@ useEffect(() => {
 
 
 
-useEffect(()=>{
-    const themeData=  localStorage.getItem('theme')
-    document.querySelector('html').setAttribute('data-theme',JSON.parse(themeData) )
-    setThemeData(JSON.parse(themeData))
-    // setThemeValue(themData)
-    
-},[theme,themData,])
-
-const themeControl = () => {      
-    setTheme(!theme)
-theme ?  localStorage.setItem('theme',JSON.stringify('dark')):localStorage.setItem('theme',JSON.stringify('light'))
 
 
 
-}
 
-
-
-const nav = <>
-<li className="hover:text-color-p font-semibold"><a  onClick={() => scrollToSection('home')} href="#home" >Home</a></li>
-<li  className="hover:text-color-p font-semibold"><a onClick={() => scrollToSection('about')} href="#about">About</a></li>
-<li  className="hover:text-color-p font-semibold"><a onClick={() => scrollToSection('skill')} href="#skill">Skill</a></li>
-<li  className="hover:text-color-p font-semibold"><a onClick={() => scrollToSection('project')} href="#project">Project</a></li>
-<li  className="hover:text-color-p font-semibold"><a onClick={() => scrollToSection('contact')} href="#contact">Contact </a></li>
-
-<label onClick={themeControl} className="flex cursor-pointer gap-2 items-center ml-3">
-
-{
-   themData==='light'? <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="5" /><path d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" /></svg>
-   
- :  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-    
-}
-
-</label>
-
-
-</>
+const nav =
+  <>
+    <li className="hover:bg-color-p hover:text-black font-semibold text-xl rounded-sm bg-slate-900 transform decoration-slice transition-colors duration-400 ">
+      <a onClick={() => scrollToSection('home')} href="#home"
+        data-tooltip-id="my-tooltip" data-tooltip-content="Home"
+        >
+        <IoHomeOutline />
+      </a>
+    </li>
+    <li className="hover:bg-color-p hover:text-black font-semibold text-xl rounded-sm bg-slate-900 transition-colors duration-400">
+      <a onClick={() => scrollToSection('about')} href="#about"
+        data-tooltip-id="my-tooltip" data-tooltip-content="About"
+        >
+        <BiUserPin />
+      </a>
+    </li>
+    <li className="hover:bg-color-p hover:text-black font-semibold text-lg rounded-sm bg-slate-900 transition-colors duration-400">
+      <a onClick={() => scrollToSection('skill')} href="#skill"
+         data-tooltip-id="my-tooltip" data-tooltip-content="Skill"
+        >
+        <SiCodeblocks />
+      </a>
+    </li>
+    <li className="hover:bg-color-p hover:text-black font-semibold text-xl rounded-sm bg-slate-900 transition-colors duration-400">
+      <a onClick={() => scrollToSection('project')} href="#project"
+         data-tooltip-id="my-tooltip" data-tooltip-content="Project"
+        >
+        <FaProjectDiagram />
+      </a>
+    </li>
+    <li className="hover:bg-color-p hover:text-black font-semibold text-xl rounded-sm bg-slate-900 transition-colors duration-400">
+      <a onClick={() => scrollToSection('contact')} href="#contact"
+         data-tooltip-id="my-tooltip" data-tooltip-content="Contact"
+        >
+        <RiContactsBook3Fill />
+      </a>
+    </li>
+  </>
+;
 
 
  
@@ -107,13 +117,14 @@ const nav = <>
                     </div>
                    <Link><h1 className={`text-xl text-white font-bold ml-5  z-50 fixed md:left-0  lg:left-0 left-8  ${visibleName ? 'top-5 transition-all' : '-top-20 transition-all'} duration-1000 `} >Shah Alom</h1></Link>
                 </div>
-                <div className="navbar-center hidden lg:flex -mt-10 ">
-                    <ul className="menu menu-horizontal px-1 navBar   flex-col flex">
+                <div className="navbar-center hidden lg:flex  ml-3 -mt-5 ">
+                    <ul className="menu menu-horizontal px-1 navBar justify-center space-y-4 items-center  flex-col flex ">
                         {nav}
                     </ul>
                 </div>
                 
             </div>
+            <Tooltip id="my-tooltip"  style={{color:'white', backgroundColor:'black',fontWeight:'bold'}}/>
         </div>
     );
 };
