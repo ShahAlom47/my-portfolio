@@ -65,4 +65,12 @@
     scroll-behavior: smooth;
   }
 
+  .animate-title {
+    opacity: 1;
+    animation: blink 1s linear 1;
+  }
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
  

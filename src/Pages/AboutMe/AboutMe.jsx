@@ -2,10 +2,15 @@ import { useState } from 'react';
 import { FaFacebook, FaGithub, FaLinkedin } from 'react-icons/fa';
 import myPhoto from '../../assets/image/my-photo.png';
 import { LiaSchoolSolid } from 'react-icons/lia';
+import { useInView } from 'react-intersection-observer';
 
 
 const AboutMe = () => {
     const [isReadMore, setIsReadMore] = useState(true);
+    const { ref, inView,} = useInView({
+        threshold: 0.5,
+        triggerOnce: true,
+    });
 
     const toggleReadMore = () => {
         setIsReadMore(!isReadMore);
@@ -14,13 +19,13 @@ const AboutMe = () => {
     const text = `Welcome to my portfolio! I am Shah Alom, a Creative Front-End Developer with a passion for building user-friendly and innovative websites and applications. Web development is not just a profession for me it's a dream, a passion, and an emotion that drives me every day. With a strong foundation in HTML, CSS, Tailwind CSS, React.js, Node.js, Express.js, Firebase, and MongoDB, I bring my creative visions to life through clean, efficient, and engaging code. My journey into web development started with a fascination for technology and design, it has evolved into a deep-seated love for creating beautiful and functional digital experiences. Every project I undertake is a new opportunity to learn, grow, and push the boundaries of what's possible. From concept to completion, I pour my heart and soul into every line of code, ensuring that the end product is not only visually appealing but also seamlessly functional. Thank you for visiting my portfolio. I look forward to the possibility of collaborating on exciting projects and bringing more of my dreams to life through the power of web development. Feel free to reach out to me at `;
 
     const email = "sahalom4729@gmail.com";
-
+console.log(inView);
     return (
-        <div id='about' className="bg-black-p md:p-7 p-4 lg:p-10  lg:pl-14 md:pl-12 ">
-            <div className="max-w lg:p-5 md:p-3 p-1">
+        <div id='about'   className="bg-black-p md:p-7 p-4 lg:p-10  lg:pl-14 md:pl-12 ">
+            <div ref={ref} className="max-w lg:p-5 md:p-3 p-1">
                 <div className="rounded-r-full border-color-p flex lg:flex-row md:flex-row flex-col gap-5 w-full">
                     <div className="flex-1 p-">
-                        <h1 className="text-color-p font-bold border-b-2 border-color-p mb-5 text-lg">ABOUT ME</h1>
+                        <h1 className={`text-color-p font-bold border-b-2 border-color-p mb-5 text-lg ${inView?'animate-title':''}`}>ABOUT ME</h1>
                         <p className="text-slate-500">
                             {isReadMore ? `${text.slice(0, 450)}...` : (
                                 <>
