@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Loading from "../SharedComponent/Loading";
 import { useEffect, useState } from "react";
+// import BannerM from "../SharedComponent/MithilaBanner/BannerM";
 
 
 
@@ -18,6 +19,7 @@ const Root = () => {
   
     return (
         loading?<Loading></Loading>:<div>
+          {/* <BannerM></BannerM> */}
             <Outlet></Outlet>
     
         

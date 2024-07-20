@@ -33,6 +33,7 @@
     background-color: #aec600;
     color: black;
     border-radius: 2px;
+    cursor: pointer;
   }
 
   .btn-p::before{
@@ -74,3 +75,24 @@
     50% { opacity: 0; }
   }
  
+
+
+  /* title  underline animation  */
+  .title-section {
+    position: relative;
+    padding: 20px 0;
+    text-align: left;
+  }
+  
+  .animated-line {
+    width: 0;
+    padding: 1px;
+    /* height: 2px; */
+    background-color: #a1a296;
+    margin: 2px auto 0;
+    transition: width 1s ease-out;
+  }
+  
+  .animate {
+    width: 100%;
+  }

@@ -8,8 +8,8 @@ import { useInView } from 'react-intersection-observer';
 const AboutMe = () => {
     const [isReadMore, setIsReadMore] = useState(true);
     const { ref, inView,} = useInView({
-        threshold: 0.5,
-        triggerOnce: true,
+        threshold: 0.2,
+        triggerOnce: false,
     });
 
     const toggleReadMore = () => {
@@ -22,11 +22,12 @@ const AboutMe = () => {
 console.log(inView);
     return (
         <div id='about'   className="bg-black-p md:p-7 p-4 lg:p-10  lg:pl-14 md:pl-12 ">
-            <div ref={ref} className="max-w lg:p-5 md:p-3 p-1">
+            <div ref={ref} className="max-w lg:p-5 md:p-3 p-1 title-section ">
                 <div className="rounded-r-full border-color-p flex lg:flex-row md:flex-row flex-col gap-5 w-full">
                     <div className="flex-1 p-">
-                        <h1 className={`text-color-p font-bold border-b-2 border-color-p mb-5 text-lg ${inView?'animate-title':''}`}>ABOUT ME</h1>
-                        <p className="text-slate-500">
+                        <h1 className={`text-color-p font-bold `}>ABOUT ME</h1>
+                        <div className={`   animated-line ${inView ? 'animate' : ''}`} />
+                        <p className="text-slate-500 mt-4">
                             {isReadMore ? `${text.slice(0, 450)}...` : (
                                 <>
                                     {text}
@@ -68,7 +69,7 @@ console.log(inView);
                         </button>
                     </div>
                     <div className="rounded-full h-full lg:w-4/12 md:w-4/12 w-8/12 mx-auto bg-gray-500 my-auto">
-                        <img src={myPhoto} alt="Your Photo" className="border-color-p border-4 w-full h-full rounded-full" />
+                    <img src={myPhoto} alt="Your Photo" className={`border-color-p  border-4 w-full h-full rounded-full  animated-line ${inView ? 'animate' : ''} `} />
                     </div>
                 </div>
             </div>

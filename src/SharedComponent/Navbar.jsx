@@ -125,7 +125,7 @@ const Navbar = () => {
     ));
 
     return (
-        <div className={`w-full m-auto p-0 z-50 fixed top-20`}>
+        <div className={` m-auto p-0 z-50 fixed top-20`}>
             <div className="p-0 m-auto flex flex-row lg:flex-col md:flex-col justify-start text-white">
                 <div className="navbar-start flex items-center">
                     <div className="dropdown fixed top-3 z-40">
@@ -145,7 +145,7 @@ const Navbar = () => {
                         </h1>
                     </Link>
                 </div>
-                <div className="navbar-center hidden lg:flex ml-3 -mt-5">
+                <div className="navbar-center hidden lg:flex  ml-3 -mt-5">
                     <ul className="menu menu-horizontal px-1 navBar justify-center space-y-4 items-center flex-col flex">
                         {nav}
                     </ul>
