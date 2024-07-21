@@ -88,8 +88,8 @@
     width: 0;
     padding: 1px;
     /* height: 2px; */
-    background-color: #a1a296;
-    margin: 2px auto 0;
+    /* background-color: #a1a296; */
+    margin: 4px auto 10px;
     transition: width 1s ease-out;
   }
   

@@ -26,7 +26,7 @@ console.log(inView);
                 <div className="rounded-r-full border-color-p flex lg:flex-row md:flex-row flex-col gap-5 w-full">
                     <div className="flex-1 p-">
                         <h1 className={`text-color-p font-bold `}>ABOUT ME</h1>
-                        <div className={`   animated-line ${inView ? 'animate' : ''}`} />
+                        <div className={` bg-color-p  animated-line ${inView ? 'animate' : ''}`} />
                         <p className="text-slate-500 mt-4">
                             {isReadMore ? `${text.slice(0, 450)}...` : (
                                 <>
@@ -68,8 +68,8 @@ console.log(inView);
                             {isReadMore ? "Read More" : "Read Less"}
                         </button>
                     </div>
-                    <div className="rounded-full h-full lg:w-4/12 md:w-4/12 w-8/12 mx-auto bg-gray-500 my-auto">
-                    <img src={myPhoto} alt="Your Photo" className={`border-color-p  border-4 w-full h-full rounded-full  animated-line ${inView ? 'animate' : ''} `} />
+                    <div className="rounded-full h-ful lg:w-4/12 md:w-4/12 w-8/12 mx-auto  my-auto">
+                    <img src={myPhoto} alt="Your Photo" className={`border-color-p bg-gray-500  border-4 w-full h-full rounded-full  animated-line ${inView ? 'animate' : ''} `} />
                     </div>
                 </div>
             </div>

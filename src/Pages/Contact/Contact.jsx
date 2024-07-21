@@ -4,10 +4,15 @@ import emailjs from '@emailjs/browser';
 import { FaFacebook, FaGithub, FaLinkedin, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useInView } from 'react-intersection-observer';
 
 
 const Contact = () => {
     const form = useRef();
+    const { ref, inView } = useInView({
+        triggerOnce: false,
+        threshold: 0.1,
+    });
 
     const sendEmail = (e) => {
         e.preventDefault();
@@ -27,9 +32,10 @@ const Contact = () => {
     };
 
     return (
-        <div id='contact' className="bg-black-p  md:p-7 p-4 lg:p-10 lg:pl-14 md:pl-12">
+        <div ref={ref} id='contact' className="bg-black-p  md:p-7 p-4 lg:p-10 lg:pl-14 md:pl-12">
             <div className="max-w lg:p-5 md:p-3 p-1">
-                <h1 className="text-color-p font-bold border-b-2 border-color-p mb-5 text-3xl">CONTACT</h1>
+                <h1 className="text-color-p font-bold \ text-3xl">CONTACT</h1>
+                <div className={` bg-color-p  pb-4 animated-line ${inView ? 'animate' : ''}`} />
                 <p className="text-slate-500 mb-8 lg:w-1/2 md:w-1/2 ">Feel free to reach out to me using the contact information below or by sending a message through the form.</p>
                 <div className="flex lg:flex-row md:flex-row flex-col gap-5 w-full my-16">
                     <div className="flex-1 p-">
