@@ -18,6 +18,7 @@ const MySkills = () => {
       });
     
     return (
+        
         <div ref={ref} id='skill' className=" bg-black-p  lg:pl-14 md:pl-12">
             <div className="max-w md:p-7 p-4 lg:p-10  py-16">
                 <div className=" flex lg:flex-row-reverse md:flex-row-reverse flex-col  gap-4">
@@ -49,6 +50,7 @@ const MySkills = () => {
             </div>
             
         </div>
+        
     );
 };
 

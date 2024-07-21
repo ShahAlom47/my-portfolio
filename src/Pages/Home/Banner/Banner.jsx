@@ -5,6 +5,7 @@ import AnimatedText from '../../../Components/AnimatedText';
 
 const Banner = () => {
     return (
+
         <div id='home' className="bg-fixed bg-cover bg-center lg:h-screen md:h-screen overflow-hidden pt-10 lg:pl-14 md:pl-12 pl-2 " style={{ backgroundImage: `url(${bg})` }}>
             <div className=" h-full flex max-w p-5">
                 <div className=" h-scree py-10 md:px-5 lg:px-10 px-2 font-spline flex justify-between w-full ">
@@ -24,7 +25,7 @@ const Banner = () => {
                             <AnimatedText text="Creative Front-End " /> 
                             <AnimatedText text="Developer" /> 
                         </h1>
-                        <p className='text-white text-xs lg:text-lg'>
+                        <p className='text-white text-xs lg:text-sm'>
                             Skilled in HTML, CSS, React, and more, I build user-friendly websites and applications with innovative designs.
                         </p>
                         <TypeAnimation
@@ -48,6 +49,7 @@ const Banner = () => {
                 </div>
             </div>
         </div>
+      
     );
 };
 

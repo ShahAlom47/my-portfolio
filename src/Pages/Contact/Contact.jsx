@@ -38,7 +38,7 @@ const Contact = () => {
                 <div className={` bg-color-p  pb-4 animated-line ${inView ? 'animate' : ''}`} />
                 <p className="text-slate-500 mb-8 lg:w-1/2 md:w-1/2 ">Feel free to reach out to me using the contact information below or by sending a message through the form.</p>
                 <div className="flex lg:flex-row md:flex-row flex-col gap-5 w-full my-16">
-                    <div className="flex-1 p-">
+                    <div className="flex-1 lg:pl-7">
                         <h2 className="text-xl font-bold text-white">Contact Information</h2>
                         <p className="text-slate-500 mt-4 flex items-center">
                             <FaEnvelope className="mr-2" /> sahalom4729@gmail.com
