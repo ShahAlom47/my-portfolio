@@ -46,8 +46,8 @@ const MyProject = () => {
                                     key={data.id}
                                     style={{
                                         opacity: inView ? 1 : 0,
-                                        transform: inView ? 'translateX(0)' : 'translateX(50px)',
-                                        transition: `opacity 0.5s ease ${index * 0.2}s, transform 20s ease ${index * 0.2}s`,
+                                        transform: inView ? 'translateY(0)' : 'translateY(50px)',
+                                        transition: `opacity 0.5s ease ${index * 0.2}s, transform 5s ease ${index * 0.2}s`,
                                     }}
                                 >
                                     <div
