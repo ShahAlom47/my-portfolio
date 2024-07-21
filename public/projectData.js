@@ -7,6 +7,8 @@ export const projectData = [
         projectName: 'HONEST Real Estate',
         projectImg: img1,
         projectLiveUrl: 'https://assignment-12-e88ce.web.app/',
+        clientRepo:'https://github.com/ShahAlom47/Assignment-12-Real-Estate',
+        serverRepo:'https://github.com/ShahAlom47/Assignment-12-Server',
         projectDescription: 'HONEST Real Estate is a modern web app for streamlined real estate transactions. Featuring secure authentication, Stripe payment integration, and role-based dashboards, built with React, Tailwind CSS, Firebase, and Node.js.',
         Features:[
 
@@ -29,6 +31,8 @@ export const projectData = [
         projectName: 'King  Lion Hotel',
         projectImg: img2,
         projectLiveUrl: 'https://assignmet-11-jwt.web.app/',
+        clientRepo:'https://github.com/ShahAlom47/Assignment-11-JWT-Hotel-Booking?tab=readme-ov-file',
+        serverRepo:'https://github.com/ShahAlom47/Assignment-11-Jwt-Server',
         projectDescription: 'This hotel booking system enables users to seamlessly book rooms and manage reservations, supported by robust user authentication for security and ease of access.',
         Features:[
 
@@ -51,7 +55,8 @@ export const projectData = [
         projectName: 'TrekTrove',
         projectImg: img3,
         projectLiveUrl: 'https://assaignment-10-with-server.web.app/',
-
+        clientRepo:'https://github.com/ShahAlom47/Assaignment-10-Client',
+        serverRepo:'https://github.com/ShahAlom47/Assaignment-10-Server',
         projectDescription: 'TrekTrove is a single-page website showcasing various tourist spots. Users can explore destinations, view spot details, and access additional information',
         Features:[
 

@@ -7,6 +7,7 @@ import { useInView } from "react-intersection-observer";
 const MyProject = () => {
     const [hoveredIndex, setHoveredIndex] = useState(null);
     const [sideData, setSideData] = useState(projectData[0]);
+    const [redMore,setReadMore]=useState(false)
 
     const { ref, inView } = useInView({
         triggerOnce: false,
@@ -36,7 +37,7 @@ const MyProject = () => {
                             <div className=" flex-1 bg-color-p  p-3 text-black ">
                                 <h1 className=" text-lg font-bold  pb-2">{sideData.projectName}</h1>
                                 <div className={` bg-black  pb-4 animated-line ${inView ? 'animate' : ''}`} />
-                                <p className="">{sideData.projectDescription.slice(0, 100)}  ..... <Link><button className=" btn btn-link">Read More</button></Link></p>
+                                <p className="">{redMore?sideData.projectDescription:`${sideData.projectDescription.slice(0, 100)}.........`}  <button onClick={()=>setReadMore(!redMore)} className=" text-blue-600 underline font-semibold mt-0 pt-0">{redMore? 'Read Less' :'Read More'}</button></p>
                             </div>
                         </div>
                         <div className=" flex-1 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-3 p-4  ">
@@ -64,7 +65,7 @@ const MyProject = () => {
                                                 className="z-10 flex-1 absolute  -bottom-10 left-3 ">
                                                 <div className=" flex justify-between">
                                                     <Link to={`/project/details/${data.id}`}><p
-                                                        style={{ width: '120px', height: '25px' }}
+                                                        style={{ width: '90px', height: '25px' }}
                                                         className=' btn-p z-0 -ml-1 backdrop-filter backdrop-blur-md  px-2 rounded-r-sm font-semibold text-white '>Details </p></Link>
                                                 </div>
                                             </div>
