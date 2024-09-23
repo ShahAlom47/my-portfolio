@@ -8,6 +8,7 @@ import logoNode from '../../assets/logo/Node.js.png';
 import logoExpress from '../../assets/logo/Express.png';
 import logoFirebase from '../../assets/logo/Firebase.png';
 import logoMongoDB from '../../assets/logo/MongoDB.png';
+import logoTs from '../../assets/logo/typescript.png';
 import { useInView } from 'react-intersection-observer';
 
 
@@ -65,5 +66,6 @@ const skills = [
     { skill: 'Node.js', logo: logoNode },
     { skill: 'Express.js', logo: logoExpress },
     { skill: 'Firebase', logo: logoFirebase },
-    { skill: 'MongoDB', logo: logoMongoDB }
+    { skill: 'MongoDB', logo: logoMongoDB },
+    { skill: 'TypeScript', logo: logoTs }
 ];

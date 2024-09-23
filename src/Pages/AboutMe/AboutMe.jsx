@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { FaFacebook, FaGithub, FaLinkedin } from 'react-icons/fa';
-import myPhoto from '../../assets/image/my-photo.png';
+import myPhoto from '../../assets/image/My-pp.jpg';
 import { LiaSchoolSolid } from 'react-icons/lia';
 import { useInView } from 'react-intersection-observer';
 

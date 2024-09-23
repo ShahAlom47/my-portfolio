@@ -42,7 +42,7 @@ const Banner = () => {
                             className='text-color-p mt-6 font-bold text-lg'
                         />
                         <button className='btn-p px-4 py-1 my-6'>
-                            <a className='w-[200px] flex items-center gap-3' download={'sah-alom-resume.pdf'} target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/15yULy7WABPFVZ38hbcpLJFxgZPQ4-9Fx/view">Download Resume <AiOutlineDownload /></a>
+                            <a className='w-[200px] flex items-center gap-3' download={'sah-alom-resume.pdf'} target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1-0OC4d0iwxvPhqn58dSvn1WGPWjyFFNr/view?usp=sharing">Download Resume <AiOutlineDownload /></a>
                         </button>
                     </div>
                     <div className='flex-1'></div>
