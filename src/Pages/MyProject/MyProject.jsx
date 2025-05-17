@@ -47,7 +47,7 @@ const MyProject = () => {
                     <div className="flex lg:flex-row gap-4 flex-col">
                         <div className="lg:w-3/12 w-full flex flex-col p-3 pr-0 ">
                             <div className="mb-6">
-                                <h1 className="md:text-2xl text-xl lg:text-2xl font-bold text-white">MY LATEST PROJECTS</h1>
+                                <h1 className="md:text-2xl text-xl lg:text-xl font-bold text-color-p">MY LATEST PROJECTS</h1>
                             </div>
                             <div className="flex-1 border-2 border-color-p p-3 text-white">
                                 <h1 className="text-lg font-bold pb-2">{sideData.projectName}</h1>

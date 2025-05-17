@@ -3,14 +3,8 @@ import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="footer footer-center bg-black-p lg:pl-14 md:pl-12 text-white rounded p-10">
-      <nav className="grid grid-flow-col gap-4 text-lg list-none">
-        <li className="hover:text-color-p font-semibold"><a href="#home">Home</a></li>
-        <li className="hover:text-color-p font-semibold"><a href="#about">About</a></li>
-        <li className="hover:text-color-p font-semibold"><a href="/#skill">Skill</a></li>
-        <li className="hover:text-color-p font-semibold"><a href="#project">Project</a></li>
-        <li className="hover:text-color-p font-semibold"><a href="#contact">Contact </a></li>
-      </nav>
+    <footer className="footer footer-center bg-black-p lg:pl-14 md:pl-12 text-white rounded p-1 ">
+     
       <nav className=" ">
         <div className="flex space-x-4 ">
           <a href="https://www.facebook.com/sai.ami.393" target="_blank" rel="noopener noreferrer">
@@ -24,7 +18,7 @@ const Footer = () => {
           </a>
         </div>
       </nav>
-      <aside className=" border-t-2 w-full py-4 ">
+      <aside className=" border-t-2 w-full py-2 ">
         <p>Copyright © ${new Date().getFullYear()} - All right reserved by Shah Alom</p>
       </aside>
     </footer>

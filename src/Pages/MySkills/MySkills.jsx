@@ -27,7 +27,7 @@ const MySkills = () => {
             <div className="max-w md:p-7 p-4 lg:p-10  py-16">
                 <div className=" flex lg:flex-row-reverse md:flex-row-reverse flex-col  gap-4">
                 <div className=" text-white lg:w-4/12 md:w-4/12 w-full px-4 my-5">
-                    <h1 className=" text-3xl font-bold   text-color-p"> MY SKILLS    </h1>
+                    <h1 className=" text-xl font-bold   text-color-p"> MY SKILLS    </h1>
                     <div className={` bg-color-p  pb-4 animated-line ${inView ? 'animate' : ''}`} />
                     <p className="w-">As a newcomer to the field of front-end development, I am eager to apply my growing knowledge and skills to real-world projects.  I am committed to creating responsive, user-friendly, and visually appealing websites. My enthusiasm for learning and adapting ensures that I am continually improving and staying updated with the latest industry trends</p>
                 </div>
