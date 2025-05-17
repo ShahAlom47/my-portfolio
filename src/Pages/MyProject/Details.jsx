@@ -24,7 +24,7 @@ const Details = () => {
 
         <div className="bg-black-p lg:pl-14 md:pl-12">
             <div className="max-w py-10">
-                <div className={` border-b- shadow-md   w-full m-auto" p-0  z-50 bg-slate-500  `} >
+                <div className={` border-b- shadow-md   w-full m-auto" p-0  z-50 bg-slate-600/40  `} >
 
                     <div className="navbar   p-0 max-w m-auto flex justify-between text-white">
                         <div className="navbar-start pl-3">
@@ -40,7 +40,7 @@ const Details = () => {
                             <Link><h1 className="text-lg text-white font-bold ml-3">Shah Alom</h1></Link>
                         </div>
                         <div className="navbar-center hidden lg:flex">
-                            <ul className="menu menu-horizontal px-1 navBar space-x-5 font-bold">
+                            <ul className="menu menu-horizontal px-1 navBar space-x-5 font-bold pr-3">
                                 {nav}
                             </ul>
                         </div>
@@ -63,11 +63,11 @@ const Details = () => {
                         <div className="flex gap-4 lg:flex-row md:flex-row flex-col ">
                             <div className="my-4">
                                 <h1 className=" text-xl font-bold">Features:</h1>
-                                {data.Features.map((data, index) => <p key={index} > {data}</p>)}
+                                {data.Features.map((data, index) => <p key={index}  className=" text-gray-300"> → {data}</p>)}
                             </div>
-                            <div className="my-4">
-                                <h1 className=" text-xl font-bold"> Technologies</h1>
-                                {data.Technologies.map((data, index) => <p key={index} > {data}</p>)}
+                            <div className="my-4 space-y-1">
+                                <h1 className=" text-xl font-bold"> Technologies:</h1>
+                                {data.Technologies.map((data, index) => <p key={index}  className=" bg-gray-800/70 px-2 py-1 rounded-l-full" > {data}</p>)}
                             </div>
 
                         </div>
