@@ -44,15 +44,15 @@ const MyProject = () => {
         <div ref={ref} id="project" className="bg-black-p md:p-7 p-4 lg:p-10 lg:pl-16 md:pl-16">
             <Element name="project">
                 <div className="max-w py-5">
-                    <div className="flex lg:flex-row gap-5 flex-col">
-                        <div className="lg:w-3/12 w-full flex flex-col p-3">
+                    <div className="flex lg:flex-row gap-4 flex-col">
+                        <div className="lg:w-3/12 w-full flex flex-col p-3 pr-0 ">
                             <div className="mb-6">
-                                <h1 className="md:text-2xl text-xl lg:text-3xl font-bold text-white">MY LATEST PROJECTS</h1>
+                                <h1 className="md:text-2xl text-xl lg:text-2xl font-bold text-white">MY LATEST PROJECTS</h1>
                             </div>
-                            <div className="flex-1 bg-color-p p-3 text-black">
+                            <div className="flex-1 border-2 border-color-p p-3 text-white">
                                 <h1 className="text-lg font-bold pb-2">{sideData.projectName}</h1>
-                                <div className={`bg-black pb-4 animated-line ${inView ? 'animate' : ''}`} />
-                                <p className="">
+                                <div className={`bg-color-p pb-4 animated-line  ${inView ? 'animate' : ''}`} />
+                                <p className=" text-gray-300">
                                     {readMore ? sideData.projectDescription : `${sideData.projectDescription.slice(0, 100)}.........`}  
                                     <button onClick={() => setReadMore(!readMore)} className="text-blue-600 underline font-semibold mt-0 pt-0">
                                         {readMore ? 'Read Less' : 'Read More'}
@@ -131,14 +131,14 @@ const MyProject = () => {
                     {/* Pagination Controls */}
                     <div className="flex justify-center mt-6">
                         <button
-                            className={`px-4 py-2 mx-2 bg-gray-500 text-white rounded ${currentIndex === 0 ? 'opacity-50 cursor-not-allowed' : ''}`}
+                            className={`px-4 py-1 mx-1 bg-gray-500 text-white rounded-l-full ${currentIndex === 0 ? 'opacity-50 cursor-not-allowed' : ''}`}
                             onClick={handlePrev}
                             disabled={currentIndex === 0}
                         >
                             Prev
                         </button>
                         <button
-                            className={`px-4 py-2 mx-2 bg-gray-500 text-white rounded ${currentIndex + projectsPerPage >= projectData.length ? 'opacity-50 cursor-not-allowed' : ''}`}
+                            className={`px-4 py-1 mx-1 bg-gray-500 text-white rounded-r-full ${currentIndex + projectsPerPage >= projectData.length ? 'opacity-50 cursor-not-allowed' : ''}`}
                             onClick={handleNext}
                             disabled={currentIndex + projectsPerPage >= projectData.length}
                         >

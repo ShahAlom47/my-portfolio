@@ -9,6 +9,9 @@ import logoExpress from '../../assets/logo/Express.png';
 import logoFirebase from '../../assets/logo/Firebase.png';
 import logoMongoDB from '../../assets/logo/MongoDB.png';
 import logoTs from '../../assets/logo/typescript.png';
+import logoRedux from '../../assets/logo/redux.png';
+import logoNextJs from '../../assets/logo/nextJs2.png';
+
 import { useInView } from 'react-intersection-observer';
 
 
@@ -42,7 +45,7 @@ const MySkills = () => {
                         <img className={` h-7 w-7   md:w-10 md:h-10 lg:w-12 lg:h-12`} src={data.logo} alt="" />
 
                     </div>
-                    <h1 className=' text-center text-base lg:text-lg font-semibold mt-3 text-color-p'>{data.skill}</h1>
+                    <h1 className=' text-center text-base lg:text-lg font-semibold mt-3 text-white'>{data.skill}</h1>
                     </div>)
                    }
                 </div>
@@ -62,10 +65,13 @@ const skills = [
     { skill: 'CSS', logo: logoCss },
     { skill: 'Tailwind CSS', logo: logoTailwind },
     { skill: 'JavaScript', logo: logoJavaScript },
+     { skill: 'TypeScript', logo: logoTs },
     { skill: 'React.js', logo: logoReact },
+    { skill: 'Next.js', logo: logoNextJs },
+    { skill: 'Redux', logo: logoRedux },
     { skill: 'Node.js', logo: logoNode },
     { skill: 'Express.js', logo: logoExpress },
     { skill: 'Firebase', logo: logoFirebase },
     { skill: 'MongoDB', logo: logoMongoDB },
-    { skill: 'TypeScript', logo: logoTs }
+   
 ];
